@@ -1,0 +1,23 @@
+
+
+/* ANIMACIÓN CARROUSEL - DESCUENTO */
+.marquee {
+    overflow: hidden;
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: max-content;
+    animation: marquee-move-text 8s linear infinite forwards;
+}
+
+
+/* TRANSICIÓN */
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
