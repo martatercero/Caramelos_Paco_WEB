@@ -1,124 +1,272 @@
 <!DOCTYPE html>
+
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caramelos Paco</title>
-</head>
 
-<body class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Caramelos Paco</title>
 
-<header class="">
-    <div class="">
-        <img src="media/logo_caramelos_paco.png" alt="Caramelos Paco">
-    </div>
-    <div class="">
-        <button></button>
-    </div>
-</header>
+        <!-- FAVICON -->
+        <link href="MEDIA/img/#" rel="icon" type="image/png">
 
-<section class="">
-    <p>10% DE DESCUENTO EN TU PRIMERA COMPRA</p>
-</section>
+        <!-- CSS -->
+        <link href="CSS/styles.css" rel="stylesheet" type="text/css">
 
-<main>
-    <section class="">
-        <h1>Nuevo</h1>
-        
-        <img src="fondonuevo.jpg" alt="Pectinas de Arándano">
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-        <div class="">
-            <p>¡Nuevas Pectinas de Arándano! ¿Las has probado ya?</p>
-            <div class="">
-                <a href="#">Probar ahora</a>
-                <a href="#">Más</a>
+        <!-- ICONOS FONT AWESOME Y GOOGLE ICONS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+    </head>
+
+
+    <body class="">
+
+        <header>
+            <!-- MENU -->
+            <nav id="menu">
+                <!-- MENU AMBURGUESA -->
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                    
+                <a href="index.html">
+                    <img src="media/logo_caramelos_paco.png" alt="Caramelos Paco">
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="#" onclick="closeMenu()"><span class="#">Productos</span></a>
+                    </li>
+                    <li>
+                        <a href="#historia" onclick="closeMenu()"><span class="#">Historia</span></a>
+                    </li>
+                    <li>
+                        <a href="#tienda" onclick="closeMenu()"><span class="3">Tienda</span></a>
+                    </li>
+                    <li>
+                        <a href="#sobre-paco" onclick="closeMenu()"><span class="#">Sobre Paco</span></a>
+                    </li>     
+                </ul>
+
+                <!-- ICONOS - DESKTOP DRCH -->
+                <div class="flex items-center gap-5 px-4 py-4">
+
+                    <button class="#">
+                       <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                    <button class="#">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+
+                    <button class="#">Login</button>
+
+                </div>
+
+                <!-- ICONO "CLOSE" -->
+                <div class="close-icon">
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </div>
+            </nav>
+            
+
+            <!-- CARROUSEL DESCUENTO -->
+            <div id="descuento" class="marquee">
+                <div class="group ">
+                    <p class="uppercase">10% de descuento en tu primera compra</p>
+                    <p class="uppercase">10% de descuento en tu primera compra</p>
+                    <p class="uppercase">10% de descuento en tu primera compra</p>
+                    <p class="uppercase">10% de descuento en tu primera compra</p>
+                </div>
             </div>
-        </div>
 
-        <div class="">
-            <a href="#seccion-siguiente" aria-label="Bajar">&downarrow;</a>
-        </div>
-    </section>
+            <div class="">
+                <h1>Nuevo</h1>
+                
+                <img src="fondonuevo.jpg" alt="Pectinas de Arándano">
 
-    <section id="seccion-siguiente" class="">
-        <h2>¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
-        <p>Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
-        
-        <div class="">
-            <img src="" alt="Caramelo izquierdo">
-            <img src="" alt="Caramelo derecho">
-        </div>
-    </section>
+                <div class="">
+                    <p>¡Nuevas Pectinas de Arándano! ¿Las has probado ya?</p>
+                    <div class="">
+                        <a href="#">Probar ahora</a>
+                        <a href="#">Más</a>
+                    </div>
+                </div>
 
-    <section>
-        <h1>Productos</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Sin azúcar</a></li>
-                <li><a href="#">Caramelos</a></li>
-                <li><a href="#">Bombon</a></li>
-                <li><a href="#">Golosinas</a></li>
-                <li><a href="#">Nubes Marshallows</a></li>
-                <li><a href="#">Regaliz</a></li>
-                <li><a href="#">Pectinas de frutas</a></li>
-                <li><a href="#">Jelly Belly</a></li>
-                <li><a href="#">Chicles Con Azúcar</a></li>
-            </ul>
-        </nav>
-        <section>
-            <p>Caramelos sin azúcar</p>
-            <img src="" alt="Pectina de Arándano">
-            <p>Nuevo</p>
-            <h2>PECTINA DE ARÁNDANO</h2>
-            <p>Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%)</p>
-            <footer>
-                <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
-                <a href="#">Ver más</a>
-            </footer>
+                <div class="">
+                    <a href="#seccion-siguiente" aria-label="Bajar">&downarrow;</a>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- INTRODUCCIÓN -->
+        <section id="introduccion" class="">
+            <h2>¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
+            <p>Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
+            
+            <div class="">
+                <img src="" alt="Caramelo izquierdo">
+                <img src="" alt="Caramelo derecho">
+            </div>
         </section>
-        <section>
-            <p>Caramelos sin azúcar</p>
-            <img src="" alt="Caramelo">
-            <p>Nuevo</p>
-            <h2>CARAMELO</h2>
-            <p>Ingredientes: </p>
-            <footer>
-                <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
-                <a href="#">Ver más</a>
-            </footer>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="#">
+            <h1 class="">Productos</h1>
+            <nav>
+                <ul class="">
+                    <li><a href="#">Sin azúcar</a></li>
+                    <li><a href="#">Caramelos</a></li>
+                    <li><a href="#">Bombon</a></li>
+                    <li><a href="#">Golosinas</a></li>
+                    <li><a href="#">Nubes Marshallows</a></li>
+                    <li><a href="#">Regaliz</a></li>
+                    <li><a href="#">Pectinas de frutas</a></li>
+                    <li><a href="#">Jelly Belly</a></li>
+                    <li><a href="#">Chicles Con Azúcar</a></li>
+                </ul>
+            </nav>
+            <section>
+                <p>Caramelos sin azúcar</p>
+                <img src="" alt="Pectina de Arándano">
+                <p>Nuevo</p>
+                <h2>PECTINA DE ARÁNDANO</h2>
+                <p>Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%)</p>
+                <footer>
+                    <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
+                    <a href="#">Ver más</a>
+                </footer>
+            </section>
+            <section>
+                <p>Caramelos sin azúcar</p>
+                <img src="" alt="Caramelo">
+                <p>Nuevo</p>
+                <h2>CARAMELO</h2>
+                <p>Ingredientes: </p>
+                <footer>
+                    <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
+                    <a href="#">Ver más</a>
+                </footer>
+            </section>
         </section>
-    </section>
 
-    <section class="">
-        <!-- mini seccion de entrega y caramelo -->
-        <div class="">
-            <img src="" alt="Icono de entrega">
-        </div>
-        <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-        <a href="#">Más información</a>
+        <!-- INFORMACIÓN ADICIONAL -->
+        <section id="informacion" class="#">
+            <!-- mini seccion de entrega y caramelo -->
+            <div class="">
+                <img src="" alt="Icono de entrega">
+            </div>
+            <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+            <a href="#">Más información</a>
 
-        <div class="">
-            <img src="" alt="Icono de caramelo">
-        </div>
-        <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-        <a href="#">Más información</a>
-    </section>
+            <div class="">
+                <img src="" alt="Icono de caramelo">
+            </div>
+            <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+            <a href="#">Más información</a>
+        </section>
 
-    <section class="">
-        <h2>El sabor de siempre, en el corazón de Madrid</h2>
-        <p>Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
-        
-        <div>
-            <p>(+34) 913 54 06 70</p>
-            <p>info@caramelospaco.com</p>
-        </div>
+        <!-- TIENDAS - Horarios y mapa -->
+        <section id="tienda" class="">
+            <h2>El sabor de siempre, en el corazón de Madrid</h2>
+            <p>Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
+            
+            <div>
+                <p>(+34) 913 54 06 70</p>
+                <p>info@caramelospaco.com</p>
+            </div>
 
-        <div>
-            <img src="media/Fachada_Caramelos_Paco.jpg" alt="Fachada Caramelos Paco">
-        </div>
+            <div>
+                <img src="media/Fachada_Caramelos_Paco.jpg" alt="Fachada Caramelos Paco">
+            </div>
 
-        <p>C/ Toledo 53 y 55, Madrid (España)</p>
-</main>
+            <p>C/ Toledo 53 y 55, Madrid (España)</p>
+        </section>
 
-</body>
+        <!-- NEWSLETTER -->
+        <section id="newsletter" class="">
+            <div>
+                <h3>Newsletter</h3>
+                <p>Registrate y recibe información de nuestros productos</p>
+            </div>
+
+            TO DO - hacer con js (formulario)
+            <div>
+                <p>Escriba su email</p>
+                <button>Enviar</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <img src="MULTIMEDIA/IMG/#">
+            <!-- Contacto -->
+            <div class="">
+                <h4 class="uppercase">Contáctanos</h4>
+                <ul class="#">
+                    <li>
+                        <a href="https://goo.gl/maps/zAeHA6eFRcFe9YpX7" class="#" title=" Caramelos Paco">C/ Toledo, 53 y 55 28005 Madrid España</a>
+                    </li>
+                    <li>
+                        <a href="tel:913540670" class="#" title=" 913540670">913540670</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@caramelospaco.com" class="dropdown_list_item  stmultilink_item_16" title=" info@caramelospaco.com" rel="nofollow">info@caramelospaco.com</a>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <a href="#" title="visa" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/CocaColaEsp/" title="mastercard" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cocacola_esp/" title="bizum" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            <!-- INFORMACIÓN -->
+            <div>
+                <h4 class="uppercase">Información</h4>
+                <ul class="#">
+                    <li>
+                        <a href="#" class="#" title="Historia">Historia</a>
+                    </li>
+                    <li>
+                        <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Aviso legal">Aviso legal</a>
+                    </li>
+                    <li>
+                        <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Protección de datos" rel="nofollow">Protección de datos personales</a>
+                    </li>
+                    <li>
+                        <a href="https://www.caramelospaco.com/content/7-politica-de-cookies" class="#" title="Protección de datos" rel="nofollow">Política de cookies</a>
+                    </li>
+                    <li>
+                        <a href="https://www.caramelospaco.com/content/3-condiciones-generales" class="#" title="Protección de datos" rel="nofollow">Condiciones Generales de Contratación</a>
+                    </li>
+                    <li>
+                        <a href="https://www.caramelospaco.com/Formulario_DESISTIMIENTO.pdf" class="#" title="Formulario de desistimiento " rel="nofollow">Formulario de Desistimiento </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- copyrigth -->
+            <div class="">
+                <p>&copy; Caramelos Paco – Endulzando la vida desde 1934</p>
+            </div>
+        </footer>
+    
+        <!-- JS -->
+        <!-- librerias primero -->
+        <script src="JS/script.js"></script>
+
+    </body>
 </html>
