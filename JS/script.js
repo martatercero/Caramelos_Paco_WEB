@@ -1,13 +1,25 @@
 // MENU
-// Abre el menu
+const menu = document.getElementById("menu");
+const botonMenu = document.getElementById("boton-menu");
+// ABRIR MENU
 function openMenu() {
-  console.log("Función openMenu");
-  document.getElementById("menu").style.transform ="translateX(0)";
-  document.getElementById("menu").style.backgroundColor ="white";
+    menu.classList.remove("-translate-x-full");
+    menu.classList.add("translate-x-0");
+    botonMenu.setAttribute("aria-expanded", "true");
+    botonMenu.setAttribute("aria-label", "Cerrar menú");
+    console.log("Menú abierto");
 }
-// CERRAR menu
+// CERRAR MENU
 function closeMenu() {
-  console.log("Función closeMenu");
-  document.getElementById("menu").style.transform ="translateX(calc(-100% + 4rem))";
-  document.getElementById("menu").style.backgroundColor ="transparent";
+    menu.classList.remove("translate-x-0");
+    menu.classList.add("-translate-x-full");
+    botonMenu.setAttribute("aria-expanded", "false");
+    botonMenu.setAttribute("aria-label", "Abrir menú");
+    console.log("Menú cerrado");
+}
+
+
+// CLARO/OSCURO
+function toggleDarkMode() {
+    document.documentElement.classList.toggle("dark");
 }
