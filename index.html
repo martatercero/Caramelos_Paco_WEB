@@ -33,15 +33,12 @@
             @theme static {
                 /* Colores del modo claro. Los del modo oscuro están en css/styles.css */
                 /* TO DO - CAMBIAR */
-                --color-fondo: #f4ecdc;
-                --color-superficie: #fffaf0;
-                --color-texto: #2a1a10;
-                --color-suave: #6e5236;
-                --color-acento: #93362a;
-                --color-borde: #d9c7a3;
+                --color-principal: #B32325;
+                --color-oscuro: #080808;
+                --color-claro: #FFFFFF;
 
-                --font-rotulo: "Fraunces", Georgia, serif;
-                --font-texto: "Work Sans", system-ui, sans-serif;
+                --font-titulos: "Dela Gothic One", sans-serif;
+                --font-texto: "IBM Plex Mono", monospace;
             }
         </style>
     </head>
@@ -49,90 +46,98 @@
 
     <body class="">
 
-        <header>
+        <header class="bg-principal sticky top-0 z-20 backdrop-blur">
             <!-- MENU -->
-            <nav id="menu">
+            <nav id="menu" class="mx-auto mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
                 <!-- MENU AMBURGUESA -->
-                <div class="menu-icon" onclick="openMenu()">
+                <div id="boton-menu" onclick="openMenu()" type="button" aria-expanded="false" aria-controls="menu" class="menu-icon rounded-full bg-acento px-3 py-2 text-sm font-semibold text-fondo md:hidden">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                     
-                <a href="index.html">
+                <a href="index.html" class="w-38">
                     <img src="MULTIMEDIA/IMG/logo_caramelos-paco.svg" alt="Caramelos Paco">
                 </a>
 
-                <ul>
+                <ul id="menu" class="hidden md:flex items-center gap-4 font-texto font-medium text-claro text-base">
                     <li>
-                        <a href="#" onclick="closeMenu()"><span class="#">Productos</span></a>
+                        <a href="#" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Productos</span></a>
                     </li>
                     <li>
-                        <a href="#historia" onclick="closeMenu()"><span class="#">Historia</span></a>
+                        <a href="#historia" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Historia</span></a>
                     </li>
                     <li>
-                        <a href="#tienda" onclick="closeMenu()"><span class="3">Tienda</span></a>
+                        <a href="#tienda" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Tienda</span></a>
                     </li>
                     <li>
-                        <a href="#sobre-paco" onclick="closeMenu()"><span class="#">Sobre Paco</span></a>
+                        <a href="#sobre-paco" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Sobre Paco</span></a>
                     </li>     
                 </ul>
 
                 <!-- ICONOS - DESKTOP DRCH -->
-                <div class="flex items-center gap-5 px-4 py-4">
+                <div class="hidden md:flex items-center gap-4">
 
-                    <button class="#">
-                       <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                    <a class="w-9 h-9 pb-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/80 hover:color-oscuro transition-colors duration-300" href="#">
+                       <img src="MULTIMEDIA/IMG/iconos/search.svg" alt="Buscar">
+                    </a>
 
-                    <button class="#">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
+                    <a class="w-9 h-9 pt-[2px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/10 transition-colors duration-300" href="#">
+                        <img src="MULTIMEDIA/IMG/iconos/shopping_cart.svg" alt="Carrito de la compra">
+                    </a>
 
-                    <button class="#">Login</button>
+                    <a class="bg-claro font-texto text-oscuro font-medium text-base inline-block rounded-full px-6 py-[9px] hover:bg-oscuro hover:text-claro transition-colors duration-300" href="#">Login</a>
+
+                    <!-- Separador -->
+                    <div class="w-[2px] h-6 bg-claro/90"></div>
+
+                    <!-- Modo oscuro -->
+                    <a class="w-9 h-9 pl-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-oscuro/10 transition-colors duration-300" href="#">
+                        <img src="MULTIMEDIA/IMG/iconos/modo-oscuro.svg" alt="Activar modo oscuro">
+                    </a>
 
                 </div>
 
                 <!-- ICONO "CLOSE" -->
-                <div class="close-icon">
+                <div class="close-icon rounded-full bg-acento px-8 py-2 text-sm font-semibold text-fondo md:hidden">
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </div>
             </nav>
-            
-
+        </header>
+        
+        <main>
             <!-- CARROUSEL DESCUENTO -->
-            <div id="descuento" class="marquee">
-                <div class="group ">
+            <section id="descuento" class="marquee bg-claro">
+                <div class="group text-sm text-principal font-bold font-texto h-8">
                     <p class="uppercase">10% de descuento en tu primera compra</p>
                     <p class="uppercase">10% de descuento en tu primera compra</p>
                     <p class="uppercase">10% de descuento en tu primera compra</p>
                     <p class="uppercase">10% de descuento en tu primera compra</p>
                     <p class="uppercase">10% de descuento en tu primera compra</p>
                 </div>
-            </div>
-
-            <div class="">
-                <h1>Nuevo</h1>
+            </section>
+    
+            <!-- PORTADA -->
+            <section class="">
+                <h1 class="font-titulos">Nuevo</h1>
                 
                 <img src="fondonuevo.jpg" alt="Pectinas de Arándano">
-
+    
                 <div class="">
-                    <p>¡Nuevas Pectinas de Arándano! ¿Las has probado ya?</p>
+                    <p class="font-titulos">¡Nuevas Pectinas de Arándano! ¿Las has probado ya?</p>
                     <div class="">
-                        <a href="#">Probar ahora</a>
-                        <a href="#">Más</a>
+                        <a href="#" class="font-texto">Probar ahora</a>
+                        <a href="#" class="font-texto">Más</a>
                     </div>
                 </div>
-
+    
                 <div class="">
                     <a href="#seccion-siguiente" aria-label="Bajar">&downarrow;</a>
                 </div>
-            </div>
-        </header>
+            </section>
 
-        <main>
             <!-- INTRODUCCIÓN -->
             <section id="introduccion" class="">
-                <h2>¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
-                <p>Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
+                <h2 class="font-titulos">¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
+                <p class="font-texto">Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
                 
                 <div class="">
                     <img src="" alt="Caramelo izquierdo">
@@ -142,9 +147,9 @@
     
             <!-- PRODUCTOS -->
             <section id="productos" class="#">
-                <h1 class="">Productos</h1>
+                <h1 class="font-titulos">Productos</h1>
                 <nav>
-                    <ul class="">
+                    <ul class="font-texto">
                         <li><a href="#">Sin azúcar</a></li>
                         <li><a href="#">Caramelos</a></li>
                         <li><a href="#">Bombon</a></li>
@@ -156,12 +161,12 @@
                         <li><a href="#">Chicles Con Azúcar</a></li>
                     </ul>
                 </nav>
-                <div>
-                    <section>
+                <div class="scroll-ml-6">
+                    <section class="font-texto">
                         <p>Caramelos sin azúcar</p>
                         <img src="" alt="Pectina de Arándano">
                         <p>Nuevo</p>
-                        <h2>PECTINA DE ARÁNDANO</h2>
+                        <h2 class="uppercase">Pectina de arándano</h2>
                         <p>Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%)</p>
                         <footer>
                             <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
@@ -189,7 +194,7 @@
                 <div class="">
                     <img src="MULTIMEDIA/IMG/iconos/camion_reparto.svg" alt="Icono de entrega">
                 </div>
-                <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                <h2 class="font-titulos">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
                 <a href="#" class="underline">Más información</a>
     
                 <div class="">

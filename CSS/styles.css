@@ -10,7 +10,7 @@
     }
 
     ::selection {
-        background: var(--color-acento);
+        background: var(--color-principal);
         color: var(--color-fondo);
     }
 
@@ -19,12 +19,9 @@
        Todas las clases que las usan (bg-fondo, text-texto, border-borde...)
        cambian solas, sin escribir dark: en cada elemento del HTML. */
     .dark {
-        --color-fondo: #1d140e;
-        --color-superficie: #2a1d14;
-        --color-texto: #f2e8d3;
-        --color-suave: #c9a679;
-        --color-acento: #e0a526;
-        --color-borde: #4a3424;
+        --color-principal: #EE9E9F;
+        --color-oscuro: #FFFFFF;
+        --color-claro: #080808;
         color-scheme: dark;
     }
 }
