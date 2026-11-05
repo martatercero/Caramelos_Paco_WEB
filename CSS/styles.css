@@ -14,15 +14,13 @@
         color: var(--color-fondo);
     }
 
-    /* MODO OSCURO CAMBIANDO EL TEMA ENTERO
-       Cuando el <html> tiene la clase .dark, redefinimos las variables del @theme.
-       Todas las clases que las usan (bg-fondo, text-texto, border-borde...)
-       cambian solas, sin escribir dark: en cada elemento del HTML. */
+    /* MODO OSCURO */
     .dark {
-        --color-principal: #EE9E9F;
+        --color-principal: #490203;
         --color-oscuro: #FFFFFF;
-        --color-claro: #080808;
-        color-scheme: dark;
+        --color-claro: #FFBEBE;
+        --color-hover: #FFFFFF;
+        color-scheme: dark; 
     }
 }
 
