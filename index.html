@@ -21,6 +21,29 @@
         <!-- ICONOS FONT AWESOME Y GOOGLE ICONS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+
+        <!-- Tailwind desde el CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- Sistema de diseño -->
+        <style type="text/tailwindcss">
+            /* Modo oscuro con la clase .dark en <html> (la pone el JavaScript) */
+            @custom-variant dark (&:where(.dark, .dark *));
+
+            @theme static {
+                /* Colores del modo claro. Los del modo oscuro están en css/styles.css */
+                /* TO DO - CAMBIAR */
+                --color-fondo: #f4ecdc;
+                --color-superficie: #fffaf0;
+                --color-texto: #2a1a10;
+                --color-suave: #6e5236;
+                --color-acento: #93362a;
+                --color-borde: #d9c7a3;
+
+                --font-rotulo: "Fraunces", Georgia, serif;
+                --font-texto: "Work Sans", system-ui, sans-serif;
+            }
+        </style>
     </head>
 
 
@@ -105,104 +128,105 @@
             </div>
         </header>
 
-
-        <!-- INTRODUCCIÓN -->
-        <section id="introduccion" class="">
-            <h2>¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
-            <p>Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
-            
-            <div class="">
-                <img src="" alt="Caramelo izquierdo">
-                <img src="" alt="Caramelo derecho">
-            </div>
-        </section>
-
-        <!-- PRODUCTOS -->
-        <section id="productos" class="#">
-            <h1 class="">Productos</h1>
-            <nav>
-                <ul class="">
-                    <li><a href="#">Sin azúcar</a></li>
-                    <li><a href="#">Caramelos</a></li>
-                    <li><a href="#">Bombon</a></li>
-                    <li><a href="#">Golosinas</a></li>
-                    <li><a href="#">Nubes Marshallows</a></li>
-                    <li><a href="#">Regaliz</a></li>
-                    <li><a href="#">Pectinas de frutas</a></li>
-                    <li><a href="#">Jelly Belly</a></li>
-                    <li><a href="#">Chicles Con Azúcar</a></li>
-                </ul>
-            </nav>
-            <section>
-                <p>Caramelos sin azúcar</p>
-                <img src="" alt="Pectina de Arándano">
-                <p>Nuevo</p>
-                <h2>PECTINA DE ARÁNDANO</h2>
-                <p>Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%)</p>
-                <footer>
-                    <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
-                    <a href="#">Ver más</a>
-                </footer>
+        <main>
+            <!-- INTRODUCCIÓN -->
+            <section id="introduccion" class="">
+                <h2>¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
+                <p>Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
+                
+                <div class="">
+                    <img src="" alt="Caramelo izquierdo">
+                    <img src="" alt="Caramelo derecho">
+                </div>
             </section>
-            <section>
-                <p>Caramelos sin azúcar</p>
-                <img src="" alt="Caramelo">
-                <p>Nuevo</p>
-                <h2>CARAMELO</h2>
-                <p>Ingredientes: </p>
-                <footer>
-                    <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
-                    <a href="#">Ver más</a>
-                </footer>
+    
+            <!-- PRODUCTOS -->
+            <section id="productos" class="#">
+                <h1 class="">Productos</h1>
+                <nav>
+                    <ul class="">
+                        <li><a href="#">Sin azúcar</a></li>
+                        <li><a href="#">Caramelos</a></li>
+                        <li><a href="#">Bombon</a></li>
+                        <li><a href="#">Golosinas</a></li>
+                        <li><a href="#">Nubes Marshallows</a></li>
+                        <li><a href="#">Regaliz</a></li>
+                        <li><a href="#">Pectinas de frutas</a></li>
+                        <li><a href="#">Jelly Belly</a></li>
+                        <li><a href="#">Chicles Con Azúcar</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <p>Caramelos sin azúcar</p>
+                    <img src="" alt="Pectina de Arándano">
+                    <p>Nuevo</p>
+                    <h2>PECTINA DE ARÁNDANO</h2>
+                    <p>Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%)</p>
+                    <footer>
+                        <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
+                        <a href="#">Ver más</a>
+                    </footer>
+                </section>
+                <section>
+                    <p>Caramelos sin azúcar</p>
+                    <img src="" alt="Caramelo">
+                    <p>Nuevo</p>
+                    <h2>CARAMELO</h2>
+                    <p>Ingredientes: </p>
+                    <footer>
+                        <p>Desde 0,70€ o 0,20€ con el código de descuento del 10%</p>
+                        <a href="#">Ver más</a>
+                    </footer>
+                </section>
             </section>
-        </section>
-
-        <!-- INFORMACIÓN ADICIONAL -->
-        <section id="informacion" class="#">
-            <!-- mini seccion de entrega y caramelo -->
-            <div class="">
-                <img src="" alt="Icono de entrega">
-            </div>
-            <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-            <a href="#">Más información</a>
-
-            <div class="">
-                <img src="" alt="Icono de caramelo">
-            </div>
-            <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-            <a href="#">Más información</a>
-        </section>
-
-        <!-- TIENDAS - Horarios y mapa -->
-        <section id="tienda" class="">
-            <h2>El sabor de siempre, en el corazón de Madrid</h2>
-            <p>Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
-            
-            <div>
-                <p>(+34) 913 54 06 70</p>
-                <p>info@caramelospaco.com</p>
-            </div>
-
-            <div>
-                <img src="media/Fachada_Caramelos_Paco.jpg" alt="Fachada Caramelos Paco">
-            </div>
-
-            <p>C/ Toledo 53 y 55, Madrid (España)</p>
-        </section>
-
-        <!-- NEWSLETTER -->
-        <section id="newsletter" class="">
-            <div>
-                <h3>Newsletter</h3>
-                <p>Registrate y recibe información de nuestros productos</p>
-            </div>
-
-            TO DO - hacer con js (formulario)
-            <div>
-                <p>Escriba su email</p>
-                <button>Enviar</button>
-            </div>
-        </section>
+    
+            <!-- INFORMACIÓN ADICIONAL -->
+            <section id="informacion" class="#">
+                <!-- mini seccion de entrega y caramelo -->
+                <div class="">
+                    <img src="" alt="Icono de entrega">
+                </div>
+                <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                <a href="#">Más información</a>
+    
+                <div class="">
+                    <img src="" alt="Icono de caramelo">
+                </div>
+                <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                <a href="#">Más información</a>
+            </section>
+    
+            <!-- TIENDAS - Horarios y mapa -->
+            <section id="tienda" class="">
+                <h2>El sabor de siempre, en el corazón de Madrid</h2>
+                <p>Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
+                
+                <div>
+                    <p>(+34) 913 54 06 70</p>
+                    <p>info@caramelospaco.com</p>
+                </div>
+    
+                <div>
+                    <img src="media/Fachada_Caramelos_Paco.jpg" alt="Fachada Caramelos Paco">
+                </div>
+    
+                <p>C/ Toledo 53 y 55, Madrid (España)</p>
+            </section>
+    
+            <!-- NEWSLETTER -->
+            <section id="newsletter" class="">
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Registrate y recibe información de nuestros productos</p>
+                </div>
+    
+                TO DO - hacer con js (formulario)
+                <div>
+                    <p>Escriba su email</p>
+                    <button>Enviar</button>
+                </div>
+            </section>
+        </main>
 
         <!-- FOOTER -->
         <footer>

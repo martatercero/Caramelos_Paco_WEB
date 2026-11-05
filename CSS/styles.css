@@ -1,23 +1,55 @@
+/* Mismo orden de capas que Tailwind (siempre en la primera línea) */
+@layer theme, base, components, utilities;
 
+/* TO DO - CAMBIAR (es un copia pega de clase) */
+/* ---------- BASE: etiquetas y tema ---------- */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem; /* para que la cabecera fija no tape los títulos */
+    }
 
-/* ANIMACIÓN CARROUSEL - DESCUENTO */
-.marquee {
-    overflow: hidden;
-    width: 100%;
+    ::selection {
+        background: var(--color-acento);
+        color: var(--color-fondo);
+    }
+
+    /* MODO OSCURO CAMBIANDO EL TEMA ENTERO
+       Cuando el <html> tiene la clase .dark, redefinimos las variables del @theme.
+       Todas las clases que las usan (bg-fondo, text-texto, border-borde...)
+       cambian solas, sin escribir dark: en cada elemento del HTML. */
+    .dark {
+        --color-fondo: #1d140e;
+        --color-superficie: #2a1d14;
+        --color-texto: #f2e8d3;
+        --color-suave: #c9a679;
+        --color-acento: #e0a526;
+        --color-borde: #4a3424;
+        color-scheme: dark;
+    }
 }
 
-.group {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    width: max-content;
-    animation: marquee-move-text 8s linear infinite forwards;
-}
-
-
-/* TRANSICIÓN */
-@keyframes marquee-move-text {
-  to {
-    transform: translateX(-50%);
-  }
+@layer components {
+    
+    /* ANIMACIÓN CARROUSEL - DESCUENTO */
+    .marquee {
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .group {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        width: max-content;
+        animation: marquee 8s linear infinite forwards;
+    }
+    
+    
+    /* TRANSICIÓN */
+    @keyframes marquee {
+      to {
+        translate: -20% 0;
+      }
+    }
 }
