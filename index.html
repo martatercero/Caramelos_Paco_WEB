@@ -48,57 +48,72 @@
 
         <header class="bg-principal sticky top-0 z-20 backdrop-blur">
             <!-- MENU -->
-            <nav id="menu" class="mx-auto mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-                <!-- MENU AMBURGUESA -->
-                <div id="boton-menu" onclick="openMenu()" type="button" aria-expanded="false" aria-controls="menu" class="menu-icon rounded-full bg-acento px-3 py-2 text-sm font-semibold text-fondo md:hidden">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+            <nav class="mx-auto mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
                     
                 <a href="index.html" class="w-38">
                     <img src="MULTIMEDIA/IMG/logo_caramelos-paco.svg" alt="Caramelos Paco">
                 </a>
 
-                <ul id="menu" class="hidden md:flex items-center gap-4 font-texto font-medium text-claro text-base">
-                    <li>
-                        <a href="#" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Productos</span></a>
+                <ul id="menu" class="fixed top-0 left-0 z-10 flex h-screen w-full -translate-x-full flex-col items-start gap-6 bg-principal p-6 pt-9 font-texto font-medium text-claro text-2xl shadow-xl transition-transform duration-300 lg:static lg:text-base lg:z-auto lg:h-auto lg:w-auto lg:translate-x-0 lg:flex-row lg:items-center lg:gap-4 lg:bg-transparent lg:p-0 lg:text-claro lg:shadow-none">
+
+                    <!-- ICONO CERRAR -->
+                    <li class="lg:hidden">
+                        <button type="button" onclick="closeMenu()"
+                                class="close-icon w-9 h-9 flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-oscuro/10 transition-colors duration-300">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </li>
+
                     <li>
-                        <a href="#historia" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Historia</span></a>
+                        <a href="#" onclick="closeMenu()">
+                            <span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300 ">Productos</span>
+                        </a>
                     </li>
+
                     <li>
-                        <a href="#tienda" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Tienda</span></a>
+                        <a href="#historia" onclick="closeMenu()">
+                            <span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Historia</span>
+                        </a>
                     </li>
+
                     <li>
-                        <a href="#sobre-paco" onclick="closeMenu()"><span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Sobre Paco</span></a>
-                    </li>     
+                        <a href="#tienda" onclick="closeMenu()">
+                            <span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Tienda</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre-paco" onclick="closeMenu()">
+                            <span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Sobre Paco</span>
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- ICONOS - DESKTOP DRCH -->
-                <div class="hidden md:flex items-center gap-4">
+                <div class="flex items-center gap-4">
 
-                    <a class="w-9 h-9 pb-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/80 hover:color-oscuro transition-colors duration-300" href="#">
+                    <a class="w-9 h-9 pb-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/80 hover:color-oscuro transition-colors duration-300 hidden lg:flex" href="#">
                        <img src="MULTIMEDIA/IMG/iconos/search.svg" alt="Buscar">
                     </a>
 
-                    <a class="w-9 h-9 pt-[2px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/10 transition-colors duration-300" href="#">
+                    <a class="w-9 h-9 pt-[2px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/10 transition-colors duration-300 hidden lg:flex" href="#">
                         <img src="MULTIMEDIA/IMG/iconos/shopping_cart.svg" alt="Carrito de la compra">
                     </a>
 
-                    <a class="bg-claro font-texto text-oscuro font-medium text-base inline-block rounded-full px-6 py-[9px] hover:bg-oscuro hover:text-claro transition-colors duration-300" href="#">Login</a>
+                    <a class="bg-claro font-texto text-oscuro font-medium text-base rounded-full px-6 py-[9px] hover:bg-oscuro hover:text-claro transition-colors duration-300 hidden lg:flex" href="#">Login</a>
 
                     <!-- Separador -->
-                    <div class="w-[2px] h-6 bg-claro/90"></div>
+                    <div class="w-[2px] h-6 bg-claro/90 hidden lg:flex"></div>
 
                     <!-- Modo oscuro -->
                     <a class="w-9 h-9 pl-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-oscuro/10 transition-colors duration-300" href="#">
                         <img src="MULTIMEDIA/IMG/iconos/modo-oscuro.svg" alt="Activar modo oscuro">
                     </a>
-
-                </div>
-
-                <!-- ICONO "CLOSE" -->
-                <div class="close-icon rounded-full bg-acento px-8 py-2 text-sm font-semibold text-fondo md:hidden">
-                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+    
+                    <!-- MENU AMBURGUESA -->
+                    <button id="boton-menu" type="button" onclick="openMenu()" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" class="menu-icon lg:hidden w-9 h-9 flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/80 hover:color-oscuro transition-colors duration-300">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
                 </div>
             </nav>
         </header>
