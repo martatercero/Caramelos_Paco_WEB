@@ -1,7 +1,7 @@
 /* Mismo orden de capas que Tailwind (siempre en la primera línea) */
 @layer theme, base, components, utilities;
 
-/* TO DO - CAMBIAR (es un copia pega de clase) */
+
 /* ---------- BASE: etiquetas y tema ---------- */
 @layer base {
     html {
@@ -9,10 +9,10 @@
         scroll-padding-top: 5rem; /* para que la cabecera fija no tape los títulos */
     }
 
-    ::selection {
+    /* ::selection {
         background: var(--color-principal);
         color: var(--color-fondo);
-    }
+    } */
 
     /* MODO OSCURO */
     .dark {
@@ -25,7 +25,7 @@
 }
 
 @layer components {
-    
+
     /* ANIMACIÓN CARROUSEL - DESCUENTO */
     .marquee {
         overflow: hidden;
@@ -47,4 +47,33 @@
         translate: -20% 0;
       }
     }
+
+    /* Flecha */
+    #portada > div > a > i {
+        animation: bounce 2s infinite ease-in-out;
+        transition: all 0.2s ease;
+    }
+
+    #portada {
+        position: relative;
+        overflow: hidden;
+    }
+
+    #portada::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(
+            to bottom,
+            rgba(179, 35, 37, 0) 0%,
+            rgba(179, 35, 37, 0.4) 40%,
+            rgba(179, 35, 37, 1) 100%
+        );
+        pointer-events: none;
+        z-index: 4;
+    }
+
 }

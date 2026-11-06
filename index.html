@@ -10,8 +10,9 @@
         <!-- FAVICON -->
         <link href="MEDIA/img/#" rel="icon" type="image/png">
 
-        <!-- CSS -->
+        <!-- CSS-->
         <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,10 +139,10 @@
             </section>
     
             <!-- PORTADA -->
-            <section class="relative overflow-hidden bg-principal text-claro">
-                <h1 class="font-titulos pt-6 text-center font-titulos text-6xl z-3 md:text-[9rem]">Nuevo</h1>
+            <section id="portada" class="h-[90vh] relative overflow-hidden bg-principal text-claro">
+                <h1 class="font-titulos pt-6 text-center font-titulos text-6xl z-3 md:text-[9rem]" data-aos="fade-up" data-aos-duration="3000">Nuevo</h1>
                 
-                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="Pectinas de Arándano" class="absolute left-1/2 top-10 z-0 w-[95%] -translate-x-1/2 object-contain sm:top-28 sm:w-[80%] lg:top-2">
+                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="Pectinas de Arándano" class="absolute left-1/2 top-10 z-0 w-[95%] -translate-x-1/2 object-contain sm:top-28 sm:w-[80%] lg:top-2" data-aos="fade-up" data-aos-duration="2000">
     
                 <div class="relative z-5 mx-auto my-18 flex w-full max-w-sm flex-col items-center gap-3 bg-claro p-[2px] sm:mt-24 lg:mt-28">
                     <p class="font-titulos text-center text-base px-5 py-3 text-oscuro sm:text-lg">¡Nuevas pectinas de arándano! ¿Las has probado ya?</p>
@@ -151,16 +152,20 @@
                     </div>
                 </div>
     
-                <div class="">
-                    <a href="#seccion-siguiente" aria-label="Bajar">&downarrow;</a>
+                <div class="relative flex justify-center z-5">
+                    <a href="#seccion-siguiente" aria-label="Bajar" class="w-12 h-12 pb-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/25 hover:color-oscuro transition-colors duration-300">
+                        <i class="fa-solid fa-arrow-down-long"></i>
+                    </a>
                 </div>
             </section>
 
             <!-- INTRODUCCIÓN -->
-            <section id="introduccion" class="h-[190vh] relative overflow-hidden bg-[linear-gradient(to_bottom,var(--color-principal)_0%,var(--color-principal)_70%,#000_100%)] px-6 p-32 text-claro">
+            <section id="Historia" class="h-[120vh] relative overflow-hidden bg-[linear-gradient(to_bottom,var(--color-principal)_0%,var(--color-principal)_70%,#000_100%)] px-6 p-32 text-claro lg:h-[190vh]">
                 <div class="mt-16 mx-auto max-w-2xl text-center md:mt-8">
-                    <h2 class="font-titulos text-3xl leading-tight sm:text-4xl">¿Antojo de algo dulce?<br>Estás en el lugar perfecto</h2>
-                    <p class="font-texto mx-auto mt-6 text-sm leading-relaxed sm:text-base">Desde hace más de 90 años, en Caramelos Paco nos dedicamos a endulzar la vida de generaciones de madrileños. Una tienda llena de historia, tradición y recuerdos, donde los sabores de siempre se encuentran con nuevos descubrimientos. Recorre nuestras estanterías, descubre una gran variedad de caramelos, dulces y especialidades y déjate llevar por la magia de esos pequeños placeres que nunca pasan de moda.</p>
+                    <h2 class="font-titulos text-3xl leading-tight sm:text-4xl" data-aos="zoom-out" data-aos-duration="800">¿Antojo de algo dulce?<br>Estás en el lugar perfecto</h2>
+                    <p class="font-texto mx-auto mt-6 text-sm leading-relaxed sm:text-base">
+                        <span id="element" data-aos="zoom-in" data-aos-duration="1000"></span>
+                    </p>
                 </div>
 
                 <div class="absolute left-1/2 top-[62%] h-[220px] w-[2px] -translate-x-1/2 bg-claro/60 md:h-[280px] lg:h-[340px]"></div>
@@ -239,7 +244,7 @@
             <!-- TIENDAS - Horarios y mapa -->
             <section id="tienda" class="">
                 <h2>El sabor de siempre, en el corazón de Madrid</h2>
-                <p>Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
+                <p id="element">Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
 
                 <div class="">
                     <div>
@@ -357,7 +362,9 @@
         </footer>
     
         <!-- JS -->
-        <!-- librerias primero -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
         <script src="JS/script.js"></script>
 
     </body>
