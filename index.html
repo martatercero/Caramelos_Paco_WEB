@@ -160,30 +160,60 @@
             </section>
 
             <!-- INTRODUCCIÓN -->
-            <section id="Historia" class="h-[120vh] relative overflow-hidden bg-[linear-gradient(to_bottom,var(--color-principal)_0%,var(--color-principal)_70%,#000_100%)] px-6 p-32 text-claro lg:h-[190vh]">
-                <div class="mt-16 mx-auto max-w-2xl text-center md:mt-8">
-                    <h2 class="font-titulos text-3xl leading-tight sm:text-4xl" data-aos="zoom-out" data-aos-duration="800">¿Antojo de algo dulce?<br>Estás en el lugar perfecto</h2>
+            <section id="Historia"
+                class="relative isolate min-h-[850px] overflow-hidden bg-[linear-gradient(to_bottom,var(--color-principal)_0%,var(--color-principal)_70%,#000_100%)] px-6 pt-32 pb-20 text-claro lg:min-h-[1100px]">
+
+                <!-- TEXTO -->
+                <div class="relative z-10 mx-auto mt-8 max-w-2xl text-center md:mt-0">
+
+                    <h2 class="font-titulos text-3xl leading-tight sm:text-4xl"
+                        data-aos="zoom-out" data-aos-duration="800">
+                        ¿Antojo de algo dulce?
+                        <br>
+                        Estás en el lugar perfecto
+                    </h2>
+
                     <p class="font-texto mx-auto mt-6 text-sm leading-relaxed sm:text-base">
-                        <span id="element" data-aos="zoom-in" data-aos-duration="1000"></span>
+                        <span id="element"
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"></span>
                     </p>
+
                 </div>
 
-                <div class="absolute left-1/2 top-[62%] h-[220px] w-[2px] -translate-x-1/2 bg-claro/60 md:h-[280px] lg:h-[340px]"></div>
-                
-                <div class="relative mt-20 flex justify-between">
-                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo izquierdo" class="absolute bottom-[-4rem] left-[-7rem] w-[18rem] rotate-[-22deg] scale-x-[-1] bottom-[-15rem]
-                    sm:left-[-8rem]  sm:w-[25rem]
-                    md:left-[-10rem] md:bottom-[-16rem] md:w-[28rem]
-                    lg:left-[-14rem] lg:bottom-[-18rem] lg:w-[38rem]">
-                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo derecho" class="absolute bottom-[-4rem] right-[-7rem] w-[18rem] rotate-[22deg] bottom-[-12rem]
-                    sm:right-[-8rem] sm:w-[26rem]
-                    md:right-[-10rem] md:bottom-[-18rem] md:w-[28rem]
-                    lg:right-[-16rem] lg:bottom-[-14rem] lg:w-[34rem]">
+                <!-- LÍNEA CENTRAL -->
+                <div class="absolute left-1/2 top-[48%] z-0 h-[300px] w-[2px] -translate-x-1/2 bg-claro/60 md:top-[43%] md:h-[400px] lg:h-[480px]">
                 </div>
+
+                <!-- CARAMELOS -->
+                <div class="absolute inset-0 z-10 pointer-events-none">
+
+                    <!-- CARAMELO IZQUIERDO -->
+                    <img
+                        src="MULTIMEDIA/IMG/caramelo_envuelto.webp"
+                        alt="Caramelo izquierdo"
+                        class="absolute bottom-[-1rem] left-[-9rem] w-[30rem] rotate-[-22deg] scale-x-[-1]
+                        sm:left-[-11rem] sm:w-[38rem]
+                        md:bottom-0 md:left-[-14rem] md:w-[50rem]
+                        lg:bottom-4 lg:left-[-17rem] lg:w-[65rem]
+                        xl:left-[-20rem] xl:w-[72rem]">
+
+                    <!-- CARAMELO DERECHO -->
+                    <img
+                        src="MULTIMEDIA/IMG/caramelo_envuelto.webp"
+                        alt="Caramelo derecho"
+                        class="absolute bottom-[-1rem] right-[-9rem] w-[30rem] rotate-[22deg]
+                        sm:right-[-11rem] sm:w-[38rem]
+                        md:bottom-0 md:right-[-14rem] md:w-[50rem]
+                        lg:bottom-4 lg:right-[-17rem] lg:w-[65rem]
+                        xl:right-[-20rem] xl:w-[72rem]">
+
+                </div>
+
             </section>
     
             <!-- PRODUCTOS -->
-            <section id="productos" class="bg-[#070707] py-16 text-white">
+            <section id="productos" class="bg-black py-16 text-white">
                 <div class="mx-auto max-w-[1100px] px-6">
             
                 <h1 class="font-titulos text-center text-5xl font-black md:text-7xl">Productos</h1>
