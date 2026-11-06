@@ -10,8 +10,9 @@
         <!-- FAVICON -->
         <link href="MEDIA/img/#" rel="icon" type="image/png">
 
-        <!-- CSS -->
+        <!-- CSS-->
         <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,6 +73,7 @@
                         <li class="py-6 lg:py-0 border-b border-claro/70 lg:border-0">
                             <a href="#" onclick="closeMenu()">
                                 <span class="px-3 py-[9px] rounded-full hover:bg-claro/80 hover:text-oscuro transition-colors duration-300">Productos</span>
+                                <!-- <i class="fa-solid fa-chevron-down"></i> -->
                             </a>
                         </li>
     
@@ -137,32 +139,46 @@
             </section>
     
             <!-- PORTADA -->
-            <section class="">
-                <h1 class="font-titulos">Nuevo</h1>
+            <section id="portada" class="h-[90vh] relative overflow-hidden bg-principal text-claro">
+                <h1 class="font-titulos pt-6 text-center font-titulos text-6xl z-3 md:text-[9rem]" data-aos="fade-up" data-aos-duration="3000">Nuevo</h1>
                 
-                <img src="fondonuevo.jpg" alt="Pectinas de Arándano">
+                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="Pectinas de Arándano" class="absolute left-1/2 top-10 z-0 w-[95%] -translate-x-1/2 object-contain sm:top-28 sm:w-[80%] lg:top-2" data-aos="fade-up" data-aos-duration="2000">
     
-                <div class="">
-                    <p class="font-titulos">¡Nuevas Pectinas de Arándano! ¿Las has probado ya?</p>
-                    <div class="">
-                        <a href="#" class="font-texto">Probar ahora</a>
-                        <a href="#" class="font-texto">Más</a>
+                <div class="relative z-5 mx-auto my-18 flex w-full max-w-sm flex-col items-center gap-3 bg-claro p-[2px] sm:mt-24 lg:mt-28">
+                    <p class="font-titulos text-center text-base px-5 py-3 text-oscuro sm:text-lg">¡Nuevas pectinas de arándano! ¿Las has probado ya?</p>
+                    <div class="flex w-full items-center justify-between border-2 border-oscuro text-sm font-bold">
+                        <a href="#" class="font-texto py-2 flex-1 text-center bg-oscuro text-claro hover:underline">Probar ahora</a>
+                        <a href="#" class="font-texto py-2 flex-1 border-black text-center text-oscuro hover:underline">Más</a>
                     </div>
                 </div>
     
-                <div class="">
-                    <a href="#seccion-siguiente" aria-label="Bajar">&downarrow;</a>
+                <div class="relative flex justify-center z-5">
+                    <a href="#seccion-siguiente" aria-label="Bajar" class="w-12 h-12 pb-[1px] flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/25 hover:color-oscuro transition-colors duration-300">
+                        <i class="fa-solid fa-arrow-down-long"></i>
+                    </a>
                 </div>
             </section>
 
             <!-- INTRODUCCIÓN -->
-            <section id="introduccion" class="">
-                <h2 class="font-titulos">¿Antojo de algo dulce? Estás en el lugar perfecto</h2>
-                <p class="font-texto">Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.</p>
+            <section id="Historia" class="h-[120vh] relative overflow-hidden bg-[linear-gradient(to_bottom,var(--color-principal)_0%,var(--color-principal)_70%,#000_100%)] px-6 p-32 text-claro lg:h-[190vh]">
+                <div class="mt-16 mx-auto max-w-2xl text-center md:mt-8">
+                    <h2 class="font-titulos text-3xl leading-tight sm:text-4xl" data-aos="zoom-out" data-aos-duration="800">¿Antojo de algo dulce?<br>Estás en el lugar perfecto</h2>
+                    <p class="font-texto mx-auto mt-6 text-sm leading-relaxed sm:text-base">
+                        <span id="element" data-aos="zoom-in" data-aos-duration="1000"></span>
+                    </p>
+                </div>
+
+                <div class="absolute left-1/2 top-[62%] h-[220px] w-[2px] -translate-x-1/2 bg-claro/60 md:h-[280px] lg:h-[340px]"></div>
                 
-                <div class="">
-                    <img src="" alt="Caramelo izquierdo">
-                    <img src="" alt="Caramelo derecho">
+                <div class="relative mt-20 flex justify-between">
+                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo izquierdo" class="absolute bottom-[-4rem] left-[-7rem] w-[18rem] rotate-[-22deg] scale-x-[-1] bottom-[-15rem]
+                    sm:left-[-8rem]  sm:w-[25rem]
+                    md:left-[-10rem] md:bottom-[-16rem] md:w-[28rem]
+                    lg:left-[-14rem] lg:bottom-[-18rem] lg:w-[38rem]">
+                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo derecho" class="absolute bottom-[-4rem] right-[-7rem] w-[18rem] rotate-[22deg] bottom-[-12rem]
+                    sm:right-[-8rem] sm:w-[26rem]
+                    md:right-[-10rem] md:bottom-[-18rem] md:w-[28rem]
+                    lg:right-[-16rem] lg:bottom-[-14rem] lg:w-[34rem]">
                 </div>
             </section>
     
@@ -362,7 +378,9 @@
         </footer>
     
         <!-- JS -->
-        <!-- librerias primero -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
         <script src="JS/script.js"></script>
 
     </body>
