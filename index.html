@@ -222,33 +222,40 @@
                         </footer>
                     </section>
                     <button class="underline">Saber más →</button>
+                    
                 </div>
             </section>
     
             <!-- INFORMACIÓN ADICIONAL -->
-            <section id="informacion" class="#">
+            <section id="informacion" class="bg-black text-white px-6 py-12 flex flex-col items-center text-center gap-12 md:flex-row md:justify-center md:gap-32">
                 <!-- mini seccion de entrega y caramelo -->
-                <div class="">
-                    <img src="MULTIMEDIA/IMG/iconos/camion_reparto.svg" alt="Icono de entrega">
-                </div>
-                <h2 class="font-titulos">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-                <a href="#" class="underline">Más información</a>
-    
-                <div class="">
-                    <img src="MULTIMEDIA/IMG/iconos/caramelo.svg" alt="Icono de caramelo">
-                </div>
-                <h2>Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-                <a href="#" class="underline">Más información</a>
+                 <div class="md:mx-30 max-w-xs">
+                    <div class="flex flex-col items-center">
+                        <img src="MULTIMEDIA/IMG/iconos/camion_reparto.svg" alt="Icono de entrega" class="h-15 w-auto">
+                    </div>
+                    <h2 class="text-xl font-bold mb-4 pt-4">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                    <a href="#" class="underline">Más información</a>
+                 </div>
+                
+                 <div class="md:mx-30 max-w-xs">
+                    <div class="flex flex-col items-center">
+                        <img src="MULTIMEDIA/IMG/iconos/caramelo.svg" alt="Icono de caramelo" class="h-15 w-auto">
+                    </div>
+                    <h2 class="text-xl font-bold mb-4 pt-4">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                    <a href="#" class="underline">Más información</a>
+                 </div>
             </section>
     
             <!-- TIENDAS - Horarios y mapa -->
-            <section id="tienda" class="">
-                <h2>El sabor de siempre, en el corazón de Madrid</h2>
-                <p id="element">Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
-
-                <div class="">
-                    <div>
-                        <img src="MULTIMEDIA/IMG/iconos/telefono.svg" alt="Teléfono">
+            <section id="tienda" class="bg-black text-white px-6 py-12">
+                <div class="max-w-xl w-full mx-auto text-center">
+                    <h2 class="text-5xl font-bold mb-6 ">El sabor de siempre, en el corazón de Madrid</h2>
+                    <p class="text-2xl">Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
+                </div>
+                
+                <div class="flex gap-5 p-18 max-w-fit mx-auto text-2xl">
+                    <div class="flex gap-5">
+                        <img src="MULTIMEDIA/IMG/iconos/reloj.svg" alt="Reloj" class="h-6 w-auto">
                         <p class=""><b>Horarios</b></p>
                     </div>
                     <div>
@@ -258,56 +265,87 @@
                     </div>
                 </div>
 
-                <div class="">
-                    <div class="">
-                        <img src="MULTIMEDIA/IMG/iconos/telefono.svg" alt="Teléfono">
-                        <a href="tel:913540670" class="#" title=" 913540670"><b>913540670</b></a>
+                <div class="flex gap-50 max-w-fit mx-auto text-xl fon">
+                    <div class="flex gap-5">
+                        <img src="MULTIMEDIA/IMG/iconos/telefono.svg" alt="Teléfono" class="h-6 w-auto">
+                        <a href="tel:913540670" class="#" title=" 913540670"><b class="tracking-widest">(+34) 913 540 670</b></a>
                     </div>
-                    <div>
-                        <img src="MULTIMEDIA/IMG/iconos/mail.svg" alt="Teléfono">
+                    <div class="flex gap-5">
+                        <img src="MULTIMEDIA/IMG/iconos/mail.svg" alt="Mail" class="h-6 w-auto">
                         <a href="mailto:info@caramelospaco.com" class="dropdown_list_item  stmultilink_item_16" title=" info@caramelospaco.com" rel="nofollow"><b>info@caramelospaco.com</b></a>
                     </div>
                 </div>
     
-                <div>
-                    <img src="MULTIMEDIA/IMG/fachada_caramelos_paco.webp" alt="Fachada Caramelos Paco">
+                <div class="md:m-5 md:px-20 flex flex-col">
+                    <img class="rounded-3xl" src="MULTIMEDIA/IMG/Fachada_Caramelos_Paco.jpg" alt="Fachada Caramelos Paco">
+                    <p class="text-right">C/ Toledo 53 y 55, Madrid (España)</p>
                 </div>
     
-                <p>C/ Toledo 53 y 55, Madrid (España)</p>
+                
             </section>
     
             <!-- NEWSLETTER -->
-            <section id="newsletter" class="">
+            <section id="newsletter" class="px-6 py-12 md:flex md:items-center md:justify-between md:gap-12">
                 <div>
-                    <h3>Newsletter</h3>
-                    <p>Registrate y recibe información de nuestros productos</p>
+                    <h3 class="text-6xl font-bold pb-3">Newsletter</h3>
+                    <p class="pb-10 text-xl">Inscríbete para no perderte los nuevos eventos que suceden a tu alrededor</p>
                 </div>
     
-                TO DO - hacer con js (formulario)
-                <div>
-                    <p>Escriba su email</p>
-                    <button>Enviar</button>
+                <!-- TO DO - hacer con js (formulario) -->
+                <div class=" px-2 py-2 flex place-content-between border-2 rounded-full md:gap-25">
+                    <p class="text-xl py-4 px-4">Escriba su email</p>
+                    <button class="text-white font-bold bg-red-800 p-5 rounded-full px-10">Enviar</button>
                 </div>
             </section>
         </main>
 
         <!-- FOOTER -->
-        <footer>
-            <img src="MULTIMEDIA/IMG/#">
-            <!-- Contacto -->
-            <div class="">
-                <h4 class="uppercase">Contáctanos</h4>
-                <ul class="#">
-                    <li>
-                        <a href="https://goo.gl/maps/zAeHA6eFRcFe9YpX7" class="#" title=" Caramelos Paco">C/ Toledo, 53 y 55 28005 Madrid España</a>
-                    </li>
-                    <li>
-                        <a href="tel:913540670" class="#" title=" 913540670">913540670</a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@caramelospaco.com" class="dropdown_list_item  stmultilink_item_16" title=" info@caramelospaco.com" rel="nofollow">info@caramelospaco.com</a>
-                    </li>
-                </ul>
+        <footer class="bg-red-800 text-white">
+            <div class="px-6 py-12">
+                <div class="md:flex gap-30">
+                    <!-- Contacto -->
+                    <div class="">
+                        <h4 class="uppercase text-xl font-bold">Contáctanos</h4>
+                        <ul class="#">
+                            <li>
+                                <a href="https://goo.gl/maps/zAeHA6eFRcFe9YpX7" class="#" title=" Caramelos Paco">C/ Toledo, 53 y 55 28005 Madrid España</a>
+                            </li>
+                            <li>
+                                <a href="tel:913540670" class="#" title=" 913540670">913540670</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@caramelospaco.com" class="dropdown_list_item  stmultilink_item_16" title=" info@caramelospaco.com" rel="nofollow">info@caramelospaco.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- INFORMACIÓN -->
+                    <div>
+                        <h4 class="uppercase text-xl font-bold">Información</h4>
+                        <ul class="#">
+                            <li>
+                                <a href="#" class="#" title="Historia">Historia</a>
+                            </li>
+                            <li>
+                                <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Aviso legal">Aviso legal</a>
+                            </li>
+                            <li>
+                                <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Protección de datos" rel="nofollow">Protección de datos personales</a>
+                            </li>
+                            <li>
+                                <a href="https://www.caramelospaco.com/content/7-politica-de-cookies" class="#" title="Protección de datos" rel="nofollow">Política de cookies</a>
+                            </li>
+                            <li>
+                                <a href="https://www.caramelospaco.com/content/3-condiciones-generales" class="#" title="Protección de datos" rel="nofollow">Condiciones Generales de Contratación</a>
+                            </li>
+                            <li>
+                                <a href="https://www.caramelospaco.com/Formulario_DESISTIMIENTO.pdf" class="#" title="Formulario de desistimiento " rel="nofollow">Formulario de Desistimiento </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- iconos RRSS y modos de pago -->
                 <div class="iconos-rrss">
                     <a href="https://twitter.com/caramelospaco?s=09" title="twitter" target="_blank">
@@ -323,40 +361,18 @@
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
-                <div class="icons-pago">
-                    <img src="MULTIMEDIA/IMG/visa.svg" alt="visa">
-                    <img src="MULTIMEDIA/IMG/mastercard.webp" alt="mastercard">
-                    <img src="MULTIMEDIA/IMG/bizum.svg" alt="bizum">
+                <div class="icons-pago flex gap-8">
+                    <img class="h-8 w-auto" src="MULTIMEDIA/IMG/visa.svg" alt="visa">
+                    <img class="h-12 w-auto" src="MULTIMEDIA/IMG/mastercard.webp" alt="mastercard">
+                    <img class="h-10 w-auto" src="MULTIMEDIA/IMG/bizum.svg" alt="bizum">
                 
                 </div>
+                <img src="MULTIMEDIA/IMG/#">
+                </div>
             </div>
-            <!-- INFORMACIÓN -->
-            <div>
-                <h4 class="uppercase">Información</h4>
-                <ul class="#">
-                    <li>
-                        <a href="#" class="#" title="Historia">Historia</a>
-                    </li>
-                    <li>
-                        <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Aviso legal">Aviso legal</a>
-                    </li>
-                    <li>
-                        <a href="https://www.caramelospaco.com/content/2-aviso-legal" class="#" title="Protección de datos" rel="nofollow">Protección de datos personales</a>
-                    </li>
-                    <li>
-                        <a href="https://www.caramelospaco.com/content/7-politica-de-cookies" class="#" title="Protección de datos" rel="nofollow">Política de cookies</a>
-                    </li>
-                    <li>
-                        <a href="https://www.caramelospaco.com/content/3-condiciones-generales" class="#" title="Protección de datos" rel="nofollow">Condiciones Generales de Contratación</a>
-                    </li>
-                    <li>
-                        <a href="https://www.caramelospaco.com/Formulario_DESISTIMIENTO.pdf" class="#" title="Formulario de desistimiento " rel="nofollow">Formulario de Desistimiento </a>
-                    </li>
-                    
-                </ul>
-            </div>
+            
             <!-- copyrigth -->
-            <div class="">
+            <div class="bg-black px-6 py-8 items-center text-center text-xl">
                 <p>&copy; Caramelos Paco – Endulzando la vida desde 1934</p>
             </div>
         </footer>
