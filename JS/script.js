@@ -28,6 +28,7 @@ function closeMenu() {
 }
 
 
+
 // CLARO/OSCURO
 function toggleDarkMode() {
     document.documentElement.classList.toggle("dark");
@@ -38,7 +39,11 @@ const btnModoClaro = document.getElementById("modo-oscuro");
 const iconoModoClaro = document.getElementById("modo-claro-icono");
 const iconoModoOscuro = document.querySelectorAll(".modo-oscuro-icono");
 const seccionProductos = document.getElementById("productos");
+const seccionNewsletter = document.getElementById("newsletter");
+const botonNewsletter = seccionNewsletter.querySelector('input[type="submit"]');
+
 // Colores css en varibales
+const colorPrincipal = getComputedStyle(document.documentElement).getPropertyValue('--color-principal');
 const colorNegro = getComputedStyle(document.documentElement).getPropertyValue('--color-oscuro');
 const colorBgClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-rosa-claro');
 const colorBgOscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-hover');
@@ -73,6 +78,24 @@ btnModoClaro.addEventListener("click", () => {
             btn.style.backgroundColor = colorBgOscuro;
         });
 
+        // NEWSLETTER
+        seccionNewsletter.style.backgroundColor = colorPrincipal;
+        
+        const hoverInNewsletter = () => {
+            botonNewsletter.style.backgroundColor = colorBgClaro;
+            botonNewsletter.style.color = "#FFFFFF";
+        };
+        const hoverOutNewsletter = () => {
+            botonNewsletter.style.backgroundColor = "#FFFFFF";
+            botonNewsletter.style.color = colorNegro;
+        };
+
+        botonNewsletter.style.backgroundColor = "#FFFFFF";
+        botonNewsletter.style.color = colorNegro;
+        botonNewsletter.addEventListener("mouseenter", hoverInNewsletter);
+        botonNewsletter.addEventListener("mouseleave", hoverOutNewsletter);
+
+
     } else {
 
         // Volver al icono original
@@ -87,8 +110,17 @@ btnModoClaro.addEventListener("click", () => {
             el.style.backgroundColor = "";
             el.style.color = "";
         });
+        seccionNewsletter.style.backgroundColor = "";
+        // Hover
+        botonNewsletter.removeEventListener("mouseenter", hoverInNewsletter);
+        botonNewsletter.removeEventListener("mouseleave", hoverOutNewsletter);
+
+        botonNewsletter.style.backgroundColor = "";
+        botonNewsletter.style.color = "";
+
     }
 });
+
 
 
 // JQuery

@@ -46,7 +46,7 @@
       }
     }
 
-    /* Flecha */
+    /* FLECHA */
     #portada > div > a > i {
         animation: bounce 2s infinite ease-in-out;
         transition: all 0.2s ease;
@@ -59,7 +59,6 @@
 
     #portada img {
         -webkit-mask-image: linear-gradient( to bottom, black 75%, transparent 100%);
-
         mask-image: linear-gradient( to bottom, black 75%, transparent 100%);
     }
 
