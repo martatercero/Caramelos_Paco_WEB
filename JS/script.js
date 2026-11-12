@@ -2,10 +2,29 @@
 AOS.init();
 
 // TYPED
-var typed = new Typed('#element', {
-    strings: ['Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.'],
-    typeSpeed: 40,
+let typedStarted = false;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting && !typedStarted) {
+
+            typedStarted = true;
+
+            new Typed('#element', {
+                strings: ['Más de 90 años haciendo la vida un poco más dulce. Descubre los sabores, caramelos y especialidades que han conquistado generaciones.'],
+                typeSpeed: 40,
+            });
+
+            observer.disconnect();
+        }
+    });
+}, {
+    threshold: 0.4
 });
+
+observer.observe(document.getElementById('historia'));
+
+
 
 // MENU
 const menu = document.getElementById("menu");
@@ -26,6 +45,40 @@ function closeMenu() {
     botonMenu.setAttribute("aria-label", "Abrir menú");
     console.log("Menú cerrado");
 }
+
+
+
+// FILTRO PRODUCTOS
+const filtros = document.querySelectorAll(".filtro-producto");
+const cards = document.querySelectorAll(".producto-card");
+
+filtros.forEach(filtro => {
+    filtro.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        const categoria = filtro.dataset.category;
+
+        filtros.forEach(btn => {
+            btn.classList.remove("bg-principal");
+        });
+
+        filtro.classList.add("bg-principal");
+
+        cards.forEach(card => {
+            if (
+                categoria === "all" ||
+                card.dataset.category === categoria
+            ) {
+                card.classList.remove("hidden");
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+
+    });
+});
+
 
 
 
@@ -50,7 +103,6 @@ const colorBgOscuro = getComputedStyle(document.documentElement).getPropertyValu
 
 
 let modoClaroActivo = false;
-
 btnModoClaro.addEventListener("click", () => {
 
     modoClaroActivo = !modoClaroActivo;
@@ -123,14 +175,21 @@ btnModoClaro.addEventListener("click", () => {
 
 
 
-// JQuery
-$(".filtro").click(function () {
+// JQuery - intento
+// $(window).on("scroll", function () {
 
-    let categoria = $(this).data("categoria");
+//     if ($(window).scrollTop() > 50) {
+//         $(".blur-header").css({
+//             "background-color": "rgba(179, 35, 37, 0.8)",
+//             "backdrop-filter": "blur(10px)",
+//             "-webkit-backdrop-filter": "blur(10px)"
+//         });
 
-    $(".producto").hide();
-
-    $('.producto[data-categoria="' + categoria + '"]')
-        .fadeIn();
-
-});
+//     } else {
+//         $(".blur-header").css({
+//             "background-color": "var(--color-principal)",
+//             "backdrop-filter": "none",
+//             "-webkit-backdrop-filter": "none"
+//         });
+//     }
+// });

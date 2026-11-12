@@ -9,10 +9,9 @@
         scroll-padding-top: 5rem; /* para que la cabecera fija no tape los títulos */
     }
 
-    /* ::selection {
-        background: var(--color-principal);
-        color: var(--color-fondo);
-    } */
+    body {
+        overflow-x: hidden;
+    }
 
     /* MODO OSCURO */
     .dark {
@@ -25,6 +24,11 @@
 }
 
 @layer components {
+
+    /* HEADER - intento para jQuery */
+    /* .blur-header {
+        background-color: var(--color-principal);
+    } */
 
     /* ANIMACIÓN CARROUSEL - DESCUENTO */
     .marquee {
@@ -46,12 +50,7 @@
       }
     }
 
-    /* FLECHA */
-    #portada > div > a > i {
-        animation: bounce 2s infinite ease-in-out;
-        transition: all 0.2s ease;
-    }
-
+    /* PORTADA */
     #portada {
         position: relative;
         overflow: hidden;
@@ -60,6 +59,30 @@
     #portada img {
         -webkit-mask-image: linear-gradient( to bottom, black 75%, transparent 100%);
         mask-image: linear-gradient( to bottom, black 75%, transparent 100%);
+    }
+
+    /* ANIMACIÓN FLECHA */
+    .animacion_flecha {
+        transition: all 0.2s ease;
+        animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes bounce1 {
+        0%, 100% {
+            transform: rotate(-90deg) translateY(0);
+        }
+        50% {
+            transform: rotate(-90deg) translateY(-15px);
+        }
     }
 
 }
