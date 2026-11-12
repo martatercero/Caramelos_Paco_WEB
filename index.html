@@ -47,8 +47,7 @@
 
 
     <body class="font-texto">
-        <!-- TO DO - JQuery al hacer hover -->
-        <header class="blur-header bg-principal sticky top-0 z-20 backdrop-blur">
+        <header class="blur-header bg-principal sticky top-0 z-20 transition-all duration-300">
             <!-- MENU -->
             <nav class="mx-auto mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
                     
@@ -139,16 +138,16 @@
             </section>
     
             <!-- PORTADA -->
-            <section id="portada" class="relative flex h-[70vh] md:h-[90vh] flex-col overflow-hidden bg-principal">
-                <h1 class="text-claro font-titulos pt-16 text-center text-[6rem] z-3 md:text-[9rem] sm:pt-6" data-aos="fade-up" data-aos-duration="3000">Nuevo</h1>
+            <section id="portada" class="relative flex h-[75vh] sm:h-[90vh] flex-col overflow-hidden bg-principal">
+                <h1 class="text-claro pt-4 font-titulos text-center text-[5rem] z-0 md:text-[9rem] sm:pt-0 xl:pt-4" data-aos="fade-up" data-aos-duration="3000">Nuevo</h1>
                 
                 <img src="MULTIMEDIA/IMG/Gominola-roja-cortada.webp" alt="Pectinas de Arándano" class="absolute left-1/2 top-1/2  w-[150%] md:w-[110%] max-w-[1200px] -translate-x-1/2 -translate-y-1/2 object-contain z-0" data-aos="fade-up" data-aos-duration="2000">
     
-                <div class="absolute left-1/2 top-[55%] z-8 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-8 px-4">
-                    <div class="w-full max-w-lg h-48 flex flex-col justify-between md:max-w-md md:h-56 bg-claro p-1">
-                        <p class="font-titulos text-center text-lg p-4 text-[#080808] sm:text-2xl">¡Nuevas pectinas de arándano! ¿Las has probado ya?</p>
+                <div class="absolute top-[35%] left-0 right-0 flex flex-col items-center gap-8 w-full px-4 lg:left-1/2 sm:top-[45%] lg:right-auto lg:-translate-x-1/2">
+                    <div class=" max-w-xl h-48 flex flex-col justify-between bg-claro p-1" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="2500">
+                        <p class="font-titulos text-center text-lg p-4 text-oscuro sm:text-2xl">¡Nuevas pectinas de arándano!<br>¿Las has probado ya?</p>
 
-                        <div class="h-12 flex w-full items-center justify-between border-2 border-oscuro text-lg font-bold">
+                        <div class="h-12 flex w-full items-center justify-between border-2 border-oscuro text-lg font-medium">
                             <a href="#" class="py-2 flex-1 text-center bg-oscuro text-claro hover:underline">Probar ahora</a>
                             <a href="#" class="py-2 flex-1 text-center text-oscuro hover:underline">Saber más</a>
                         </div>
@@ -157,7 +156,7 @@
                     <!-- Flecha  -->
                     <a href="#historia"
                     aria-label="Bajar"
-                    class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-claro text-claro hover:bg-claro/25 transition-colors duration-300">
+                    class="animacion_flecha  w-12 h-12 mt-6 opacity-75 hover:opacity-100 flex items-center justify-center rounded-full border-2 border-claro text-claro transition-colors duration-300 cursor-pointer" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
                         <i class="fa-solid fa-arrow-down-long"></i>
                     </a>
 
@@ -175,23 +174,23 @@
                     </p>
                 </div>
 
-                <div class="absolute left-1/2 top-[65%] z-0 h-[150px] w-[2px] -translate-x-1/2 bg-claro/60 sm:top-[58%] sm:h-[200px] md:top-[43%] md:h-[400px] lg:h-[480px]">
+                <div class="absolute left-1/2 top-[65%] z-0 h-[250px] w-[2px] -translate-x-1/2 bg-claro/60 sm:top-[58%] sm:h-[200px] md:h-[400px] lg:h-[480px]">
                 </div>
 
                 <!-- CARAMELOS -->
                 <div class="absolute inset-0 z-10 pointer-events-none">
                     <!-- IZQ. -->
-                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo izquierdo" class="absolute bottom-0 left-[-13rem] w-[28rem] rotate-[-22deg] scale-x-[-1]
-                        sm:left-[-11rem] sm:w-[38rem]
-                        md:bottom-0 md:left-[-14rem] md:w-[50rem]
-                        lg:bottom-4 lg:left-[-17rem] lg:w-[65rem]
+                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo izquierdo" class="absolute bottom-32 left-[-9rem] w-[30rem] rotate-[-22deg] scale-x-[-1]
+                        sm:left-[-14rem] sm:w-[38rem]
+                        md:bottom-0 md:left-[-16rem] md:w-[45rem]
+                        lg:bottom-4 lg:left-[-22rem] lg:w-[55rem]
                         xl:left-[-20rem] xl:w-[72rem]">
 
                     <!-- DRCH. -->
-                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo derecho" class="absolute bottom-0 right-[-13rem] w-[28rem] rotate-[22deg]
-                        sm:right-[-11rem] sm:w-[38rem]
-                        md:bottom-0 md:right-[-14rem] md:w-[50rem]
-                        lg:bottom-4 lg:right-[-17rem] lg:w-[65rem]
+                    <img src="MULTIMEDIA/IMG/caramelo_envuelto.webp" alt="Caramelo derecho" class="absolute bottom-12 right-[-10rem] w-[30rem] rotate-[22deg]
+                        sm:right-[-14rem] sm:w-[37rem]
+                        md:bottom-4 md:right-[-16rem] md:w-[45rem]
+                        lg:bottom-12 lg:right-[-22rem] lg:w-[55rem]
                         xl:right-[-20rem] xl:w-[72rem]">
                 </div>
             </section>
@@ -199,40 +198,38 @@
             <!-- PRODUCTOS -->
             <section id="productos" class="bg-[#080808] py-16 text-claro">
                 <div class="mx-auto max-w-[1100px] px-6">
-                <h1 class="font-titulos text-[#FFFFFF] text-center text-3xl sm:text-4xl">Productos</h1>
+                <h1 class="font-titulos text-[#FFFFFF] text-center text-3xl sm:text-4xl" data-aos="fade-right" data-aos-duration="1200">Productos</h1>
             
                 <nav class="mt-12 md:mt-16" aria-label="Categorías de productos">
                     <ul class="flex gap-2 overflow-x-auto whitespace-nowrap text-sm text-base [scrollbar-width:none] md:text-lg sm:text-xl">
                         <li>
-                            <a href="#" aria-current="page"
-                            class="block rounded-full bg-principal px-5 py-2.5">Sin azúcar</a>
+                            <a href="#" aria-current="page" data-category="all"
+                            class="filtro-producto  block rounded-full bg-principal px-5 py-2 hover:bg-claro/20">Todos</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Caramelos</a>
+                            <a href="#" data-category="pectinas-frutas" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Pectinas de frutas</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Bombones</a>
+                            <a href="#" data-category="sin-azucar"
+                            class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Sin azúcar</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Golosinas</a>
+                            <a href="#" data-category="caramelos" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Caramelos</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Nubes Marshmallows</a>
+                            <a href="#" data-category="bombones" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Bombones</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Regaliz</a>
+                            <a href="#" data-category="golosinas" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Golosinas</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Grageas</a>
+                            <a href="#" data-category="nubes-marshallows" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Nubes Marshallows</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Pectinas de frutas</a>
+                            <a href="#" data-category="regaliz" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Regaliz</a>
                         </li>
                         <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Jelly Belly</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block rounded-full px-5 py-2.5 transition hover:bg-white/10">Chicles con azúcar</a>
+                            <a href="#" data-category="grageas" class="filtro-producto  block rounded-full px-5 py-2 transition hover:bg-claro/20">Grageas</a>
                         </li>
                     </ul>
                 </nav>
@@ -241,13 +238,14 @@
                 <div class="mt-10 md:mt-12">
                     <div class="flex snap-x snap-mandatory scroll-pl-6 gap-6 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [mask-image:linear-gradient(to_right,black_80%,transparent)]">
             
-                        <article class="flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]">
+                        <!-- Pectinas -->
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="pectinas-frutas">
                             <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
-                                <p class="text-sm">Caramelos sin azúcar</p>
-                                <img src="MULTIMEDIA/IMG/Gominola-rosa.webp" alt="Caramelo" class="mx-auto my-6 w-4/5 object-contain">
+                                <p class="text-sm">Pectina</p>
+                                <img src="MULTIMEDIA/IMG/Gominola-rosa.webp" alt="pectina de arandano" class="mx-auto my-6 w-4/5 object-contain">
                                 <p class="text-sm font-semibold">0,20€ (cada pieza)</p>
-                                <h2 class="text-2xl font-bold uppercase leading-tight">Pectina de arándano</h2>
-                                <p class="mt-4 pb-6 text-sm leading-snug">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Pectina de arándano</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
                             </div>
                             <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
                                 <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
@@ -255,13 +253,13 @@
                             </div>
                         </article>
 
-                        <article class="flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]">
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="pectinas-frutas">
                             <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
-                                <p class="text-sm">Caramelos sin azúcar</p>
-                                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="Caramelo" class="mx-auto my-6 w-4/5 object-contain">
+                                <p class="text-sm">Pectina</p>
+                                <img src="MULTIMEDIA/IMG/Gominola-naranja.webp" alt="pectina de melocotón" class="mx-auto my-6 w-4/5 object-contain">
                                 <p class="text-sm font-semibold">Nuevo</p>
-                                <h2 class="text-2xl font-bold uppercase leading-tight">Caramelo</h2>
-                                <p class="mt-4 pb-6 text-sm leading-snug">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Pectina de melocotón</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Melocotón, antioxidante)</p>
                             </div>
                             <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
                                 <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
@@ -269,13 +267,13 @@
                             </div>
                         </article>
 
-                        <article class="flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]">
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="pectinas-frutas">
                             <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
-                                <p class="text-sm">Caramelos sin azúcar</p>
-                                <img src="MULTIMEDIA/IMG/Gominola-rosa.webp" alt="Caramelo" class="mx-auto my-6 w-4/5 object-contain">
+                                <p class="text-sm">Pectina</p>
+                                <img src="MULTIMEDIA/IMG/Gominola-rosa.webp" alt="pectina de fresa" class="mx-auto my-6 w-4/5 object-contain">
                                 <p class="text-sm font-semibold">Nuevo</p>
-                                <h2 class="text-2xl font-bold uppercase leading-tight">Pectina de fresa</h2>
-                                <p class="mt-4 pb-6 text-sm leading-snug">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Pectina de fresa</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Fresa, antioxidante)</p>
                             </div>
                             <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
                                 <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
@@ -283,13 +281,56 @@
                             </div>
                         </article>
 
-                        <article class="flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]">
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="pectinas-frutas">
+                            <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
+                                <p class="text-sm">Pectina</p>
+                                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="pectina de cereza" class="mx-auto my-6 w-4/5 object-contain">
+                                <p class="text-sm font-semibold">Nuevo</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Pectina de cereza</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
+                                <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
+                                <a href="#" class="shrink-0 rounded-full bg-claro px-5 py-2 text-sm font-semibold text-oscuro transition hover:text-claro hover:bg-oscuro">Comprar</a>
+                            </div>
+                        </article>
+
+                        <!-- Sin azúcar -->
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="sin-azucar">
                             <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
                                 <p class="text-sm">Caramelos sin azúcar</p>
-                                <img src="MULTIMEDIA/IMG/gominola_roja.webp" alt="Caramelo" class="mx-auto my-6 w-4/5 object-contain">
+                                <img src="MULTIMEDIA/IMG/piruleta-corazon_sin-azucar.webp" alt="Piruleta de corazón sin azúcar" class="mx-auto my-6 w-4/5 object-contain">
+                                <p class="text-sm font-semibold">0,35€ (cada pieza)</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Piruleta corazón sin azúcar</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
+                                <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
+                                <a href="#" class="shrink-0 rounded-full bg-claro px-5 py-2 text-sm font-semibold text-oscuro transition hover:text-claro hover:bg-oscuro">Comprar</a>
+                            </div>
+                        </article>
+
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="sin-azucar">
+                            <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
+                                <p class="text-sm">Caramelos sin azúcar</p>
+                                <img src="MULTIMEDIA/IMG/caramelos-de-propoleo_jalea-real_sin-azucar.webp" alt="Caramelo de propolio sin azúcar" class="mx-auto my-0 w-4/5 object-contain">
+                                <p class="text-sm font-semibold">Limón, jalea real, ...</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Caramelos de propolio sin azúcar</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Edulcorantes (Isomaltosa y sacarinas), propóleo (1,2%) y aromas.</p>
+                            </div>
+                            <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
+                                <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
+                                <a href="#" class="shrink-0 rounded-full bg-claro px-5 py-2 text-sm font-semibold text-oscuro transition hover:text-claro hover:bg-oscuro">Comprar</a>
+                            </div>
+                        </article>
+
+                        <article class="producto-card  flex w-[17.5rem] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] bg-claro text md:w-[22rem]" data-category="sin-azucar">
+                            <div class="text-oscuro flex flex-1 flex-col px-6 pt-6 md:px-8">
+                                <p class="text-sm">Caramelos sin azúcar</p>
+                                <img src="MULTIMEDIA/IMG/caramelo-miel_sin-azucar.webp" alt="Caramelo de miel sin azúcar" class="mx-auto my-0 w-4/5 object-contain">
                                 <p class="text-sm font-semibold">Nuevo</p>
-                                <h2 class="text-2xl font-bold uppercase leading-tight">Caramelo</h2>
-                                <p class="mt-4 pb-6 text-sm leading-snug">Ingredientes: Azúcar, jarabe de glucosa, agua, pulpa de frutas (10%) (Manzana, antioxidante)</p>
+                                <h3 class="mb-4 text-xl font-bold uppercase md:mb-0 md:text-2xl">Caramelo de miel sin azúcar</h3>
+                                <p class="mt-4 pb-6 text-sm hidden md:block">Ingredientes: Edulcorantes (Isomaltosa y sacarinas), acidulante: ácido cítrico, aromas y colorantes E100</p>
                             </div>
                             <div class="flex flex-col items-center justify-between gap-4 bg-principal px-6 py-4 md:px-8 md:flex-row">
                                 <p class="text-xs leading-snug text-center md:text-left">Desde 0,70€ o 0,20€ con el código de descuento #PACO-26.</p>
@@ -310,20 +351,20 @@
             <!-- INFORMACIÓN ADICIONAL -->
             <section id="informacion" class="py-16 px-6 bg-[#080808] text-claro text-center md:px-0">
                 <div class="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-18 md:flex-row md:justify-around">
-                    <div class="max-w-xs">
-                    <div class="flex flex-col items-center">
-                        <img src="MULTIMEDIA/IMG/iconos/camion_reparto.svg" alt="Icono de entrega" class="modo-oscuro-icono  h-10 w-auto sm: 12 md:h-14">
-                    </div>
-                    <h2 class="font-titulos text-md my-4 sm:text-lg md:text-xl">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-                    <a href="#" class="text-sm text-claro/80 hover:underline underline-offset-2 hover:text-claro md:text-md">Más información</a>
+                    <div class="max-w-xs" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                        <div class="flex flex-col items-center">
+                            <img src="MULTIMEDIA/IMG/iconos/camion_reparto.svg" alt="Icono de entrega" class="modo-oscuro-icono  h-10 w-auto sm: 12 md:h-14">
+                        </div>
+                        <h2 class="font-titulos text-md my-4 sm:text-lg md:text-xl">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                        <a href="#" class="text-sm text-claro/80 hover:underline underline-offset-2 hover:text-claro md:text-md">Más información</a>
                     </div>
                     
-                    <div class="max-w-xs">
-                    <div class="flex flex-col items-center">
-                        <img src="MULTIMEDIA/IMG/iconos/caramelo.svg" alt="Icono de caramelo" class="modo-oscuro-icono  h-10 w-auto sm: 12 md:h-14">
-                    </div>
-                    <h2 class="font-titulos text-md my-4 sm:text-lg md:text-xl">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
-                    <a href="#" class="text-sm text-claro/80 hover:underline underline-offset-2 hover:text-claro md:text-md">Más información</a>
+                    <div class="max-w-xs" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000">
+                        <div class="flex flex-col items-center">
+                            <img src="MULTIMEDIA/IMG/iconos/caramelo.svg" alt="Icono de caramelo" class="modo-oscuro-icono  h-10 w-auto sm: 12 md:h-14">
+                        </div>
+                        <h2 class="font-titulos text-md my-4 sm:text-lg md:text-xl">Entrega en 2h desde la tienda más cercana o recogida en tienda.</h2>
+                        <a href="#" class="text-sm text-claro/80 hover:underline underline-offset-2 hover:text-claro md:text-md">Más información</a>
                     </div>
                 </div>
             </section>
@@ -331,7 +372,7 @@
             <!-- TIENDAS - Horarios y mapa -->
             <section id="tienda" class="bg-[#080808] text-claro px-6 py-12">
                 <div class="mt-24 mb-14 max-w-3xl w-full mx-auto text-center">
-                    <h2 class="font-titulos text-[#FFFFFF] text-3xl sm:text-4xl mb-6">El sabor de siempre, en el corazón de Madrid</h2>
+                    <h2 class="font-titulos text-[#FFFFFF] text-3xl sm:text-4xl mb-6" data-aos="zoom-out" data-aos-duration="800">El sabor de siempre, en el corazón de Madrid</h2>
                     <p class="text-claro text-sm sm:text-xl">Visítanos, recorre nuestras estanterías repletas de dulces y descubre por qué Caramelos Paco sigue siendo un lugar especial para tantas generaciones de madrileños.</p>
                 </div>
 
